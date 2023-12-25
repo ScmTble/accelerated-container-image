@@ -554,7 +554,7 @@ func (o *snapshotter) constructOverlayBDSpec(ctx context.Context, key string, wr
 		log.G(ctx).Infof("prepare writable layer. (sn: %s)", id)
 		vsizeGB := 0
 		if info.Parent == "" {
-			vsizeGB = 64
+			vsizeGB = 10
 		}
 		if err := o.prepareWritableOverlaybd(ctx, id, vsizeGB); err != nil {
 			return err
